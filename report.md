@@ -229,8 +229,8 @@ plt.show()
 
 
 <p style="text-align: justify;">
-We can observe that Leviticus is the least similar to the other books, which suggests that predictions for each verse are likely to be quite accurate, as it stands out in content. In contrast, Exodus and Deuteronomy are both highly similar to 2 other books, meaning that predicting the book for verses from these books could be more challenging, leading to lower accuracy due to content overlap.
-</p>
+
+We can see that Leviticus stands out as the least similar to the other books, which suggests that predictions for its verses are likely to be more accurate, as its content is unique. On the other hand, Exodus and Deuteronomy are very similar to two other books, making it harder to predict the correct book for verses from these books. This overlap in content could result in lower prediction accuracy.</p>
 
 ## Machine Learning and Deep Learning Models
 <p style="text-align: justify;">
@@ -244,7 +244,7 @@ We will start with traditional machine learning models, such as Support Vector M
 
 #### Prepare Train and Test Data
 <p style="text-align: justify;">
-The dataset is divided into training and testing sets, with 70% allocated for training and 30% for testing. The text data and labels are converted to NumPy arrays for compatibility with machine learning workflows. Additionally, a mapping is created to assign unique numeric identifiers to each book in from Torah.
+We will divide data into training and testing sets, with 70% allocated for training and 30% for testing. The text data and labels are converted to NumPy arrays for compatibility with machine learning workflows. Additionally, a mapping is created to assign unique numeric identifiers to each book in from Torah.
 </p>
 
 <details>
@@ -342,7 +342,7 @@ def get_base_estimator(model: str):
 
 #### Training Script
 <p style="text-align: justify;">
-We will train a text classification model using a pipeline with TfidfVectorizer and the specified estimator. N-grams in the vectorizer represent sequences of 1 to 3 consecutive words. The model's training and testing accuracies are returned.
+We will train a text classification model using a pipeline with TfidfVectorizer and the specified estimator. N-grams in the vectorizer represent sequences of 1 to 3 consecutive words. We will return model's training and testing accuracies.
 </p>
 
 <details>
@@ -366,7 +366,7 @@ def machine_learning(estimator, train_data, train_labels, test_data, test_labels
 ```
 </details>
 
-#### Plot Accuracy
+#### Plot Accuracies
 <p style="text-align: justify;">
 This function plots training and testing accuracies for different models using bar charts. It prepares the data, creates bars for each model, and annotates the bars with accuracy values. The plot displays training vs testing accuracy for each model, with a legend and axis labels.
 </p>
@@ -467,7 +467,7 @@ The best-performing model is Support vector machine, with an accuracy of 74%. Wh
 
 #### Tuned Estimators
 <p style="text-align: justify;">
-Returns tuned versions of machine learning models with a bit optimized hyperparameters for better performance.
+This code returns a tuned versions of machine learning models with a bit optimized hyperparameters for better performance.
 </p>
 
 <details>
@@ -522,7 +522,7 @@ This time, the gap between training and testing accuracy is much smaller, sugges
 
 ### Deep Learning
 <p style="text-align: justify;">
-    In this section, we will explore a state-of-the-art approach using deep learning. Specifically, we will utilize the <strong>Bible-roberta-base</strong> model, a specialized variant of the RoBERTa architecture, renowned for its exceptional performance across a wide range of natural language processing (NLP) tasks. This variant of model was trained for one epoch on datasets comprising seven English Bible translations, allowing it to capture linguistic and contextual nuances specific to biblical text. For more details, you can refer to the official repository: <a href="https://huggingface.co/abhi1nandy2/Bible-roberta-base/blob/main/README.md" target="_blank">Bible-roberta-base on Hugging Face</a>.
+    In this section, we will explore a state-of-the-art approach using deep learning. Specifically, we will utilize the <strong>Bible-roberta-base</strong> model, a specialized variant of the BERT architecture, renowned for its exceptional performance across a wide range of natural language processing (NLP) tasks. This variant of model was trained for one epoch on datasets comprising seven English Bible translations, allowing it to capture linguistic and contextual nuances specific to biblical text. For more details, you can refer to the official repository: <a href="https://huggingface.co/abhi1nandy2/Bible-roberta-base/blob/main/README.md" target="_blank">Bible-roberta-base on Hugging Face</a>.
 </p>
 
 
@@ -559,7 +559,7 @@ class BibleDataset(Dataset):
 
 #### Prepare Datasets
 <p style="text-align: justify;">
-This script loads a tokenizer for the specified model, calculates the maximum text length, and tokenizes the training and testing data. It then creates custom BibleDataset instances for the training and testing datasets.
+This script loads a tokenizer for the specified model, calculates the maximum text length, and tokenizes the training and testing data. It then creates custom BibleDataset instances for the training and testing data.
 </p>
 
 <details>
@@ -673,7 +673,7 @@ def train_dl_model(model_id, train_dataset, test_dataset, save_callback, num_lab
 
 #### Train Deep Learning Model
 <p style="text-align: justify;">
-Let´s train a deep learning model using the specified parameters, including the number of labels, epochs, learning rate, and verbosity. The model is saved after each epoch using the SaveCallback.
+Let´s train a deep learning model using the specified parameters, including the number of labels, epochs, learning rate, and verbosity. We will also save the model after each epoch using the SaveCallback.
 </p>
 
 <details>
@@ -728,7 +728,7 @@ train_dl_model(model_id, train_dataset, test_dataset, save_callback, **parameter
 
 
 <p style="text-align: justify;">
-We can see that the training loss decreases steadily, showing the model is learning. However, from epoch 2, the validation loss slows down, suggesting potential overfitting, where the model improves on training data but struggles to generalize to unseen data. Let´s check accuracies.
+We can see that the training loss decreases steadily, showing the model is learning. However, from epoch 2, the validation loss starts to stagnate, suggesting potential overfitting, where the model improves on training data but struggles to generalize to unseen data. Let´s check accuracies.
 </p>
 
 #### Evaluate Saved Models
@@ -910,7 +910,7 @@ The 2-epoch model predicts that a verse belongs to the book of Numbers only 292 
 
 ## Conclusion
 <p style="text-align: justify;">
-We analyzed the King James Bible dataset and experimented with several machine learning models to predict the Torah book based on a verse. The best performing tuned model was logistic regression, achieving an accuracy of 66%. We then explored a deep learning approach using a variant of the BERT language model, which performed quite well, reaching an accuracy of 75% after 2 epochs and 77% after 4 epochs. It is important to note that we did not conduct extensive hyperparameter tuning, as this was not the primary goal of the project. I believe there is room for improvement in each model with more thorough hyperparameter optimization.
+We analyzed the King James Bible dataset and experimented with several machine learning models to predict the Torah book based on a verse. The best performing tuned model was logistic regression, achieving an accuracy of 66%. We then explored a deep learning approach using a variant of the BERT language model, which performed quite well, reaching an accuracy of 75% after 2 epochs and 77% after 4 epochs. It is important to note that we did not conduct extensive hyperparameter tuning, as this was not the primary goal of the project. There is surely room for improvement in each model with more thorough hyperparameter optimization.
 </p>
 
 <p style="text-align: justify;">
