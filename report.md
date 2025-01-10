@@ -849,7 +849,7 @@ Both models demonstrate high accuracy for the book of Leviticus, as anticipated.
 
 ### Plotting Count of Predictions per Class
 <p style="text-align: justify;">
-This code plots the count of predictions per class for the 2-epoch and 4-epoch models on the test dataset. We also plot the true label counts for comparison
+This code plots the count of predictions per class for the 2-epoch and 4-epoch models on the test dataset. We also plot the true label counts for comparison.
 </p>
 
 <details>
