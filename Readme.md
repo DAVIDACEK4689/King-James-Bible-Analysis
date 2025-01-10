@@ -8,12 +8,12 @@
 
 <h2>Usage</h2>
 
-<h3>Offline</h3>
+<h3>Static Report</h3>
 <p style="text-align: justify;">
-    The offline version of the report with expandable code blocks is available in <a href="report.md">report.md</a>.
+    The report with expandable code blocks is available in <a href="report.md">report.md</a>.
 </p>
 
-<h3>Online</h3>
+<h3>Dynamic Notebook</h3>
 <p style="text-align: justify;">
     The Jupyter notebook is available in <a href="report.ipynb">report.ipynb</a>, with all the requirements listed in <a href="requirements.txt">requirements.txt</a>.
 </p>
