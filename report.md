@@ -1,10 +1,6 @@
-<center>
-
-# King James Bible Dataset Analysis
-### Author: Tadeáš Tomiška
+<h1 align="center">King James Bible Dataset Analysis</h1>
+<h2 align="center"> Author: Tadeáš Tomiška</h2>
 <br>
-
-</center>
 
 <p style="text-align: justify;">
 The King James Bible (KJB), also known as the Authorized Version (AV), is an English translation of the Christian Bible first published in 1611. It is one of the most widely read and influential works in the English language. In this study, we will focus specifically on the Torah, which comprises the first five books of the Old Testament: Genesis, Exodus, Leviticus, Numbers, and Deuteronomy. Our analysis will begin with a basic exploration of the dataset, including:
