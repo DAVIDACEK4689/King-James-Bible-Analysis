@@ -17,27 +17,3 @@
 <p style="text-align: justify;">
     The Jupyter notebook is available in <a href="report.ipynb">report.ipynb</a>, with all the requirements listed in <a href="requirements.txt">requirements.txt</a>.
 </p>
-
-<details>
-<summary>Click to expand</summary>
-
-
-```python
-import pandas as pd
-
-# Define a function to parse the book, chapter, and verse
-def parse_reference(reference):
-    book, chapter_verse = reference.rsplit(' ', 1)
-    chapter, verse = map(int, chapter_verse.split(':'))
-    return book, chapter, verse
-
-# Load the file
-file_path = "data/bible.txt"
-data = pd.read_csv(file_path, header=None, sep="\t", names=["Book Chapter:Verse", "Text"])
-data["Book"], data["Chapter"], data["Verse"] = zip(*data["Book Chapter:Verse"].apply(parse_reference))
-data = data[["Book", "Chapter", "Verse", "Text"]]
-
-# Display the resulting DataFrame
-data.head()
-```
-</details>
