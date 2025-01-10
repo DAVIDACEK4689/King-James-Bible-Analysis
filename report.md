@@ -921,6 +921,7 @@ An interesting next step in this project would be to explore ensemble methods, c
 
 ## References
 <p style="text-align: justify;">
-[cs60075_team2 at SemEval-2021 Task 1 : Lexical Complexity Prediction using Transformer-based Language Models pre-trained on various text corpora](https://aclanthology.org/2021.semeval-1.87/) (Nandy et al., SemEval 2021)
+<a href="https://aclanthology.org/2021.semeval-1.87/">cs60075_team2 at SemEval-2021 Task 1 : Lexical Complexity Prediction using Transformer-based Language Models pre-trained on various text corpora</a> (Nandy et al., SemEval 2021)
 </p>
+
 
