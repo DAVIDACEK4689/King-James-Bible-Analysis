@@ -876,7 +876,8 @@ bar_width = 0.25
 
 # Create the plot
 fig, ax = plt.subplots(figsize=(10, 6))
-label_bars = ax.bar(x - bar_width, num_labels, bar_width, label='Labels')
+
+# Plot prediction bars first
 for i, (name, counts) in enumerate(pred_counts.items()):
     pred_bars = ax.bar(x + i * bar_width, [counts[label] for label in range(len(torah_books))], bar_width, label=name)
 
@@ -885,14 +886,17 @@ for i, (name, counts) in enumerate(pred_counts.items()):
         height = bar.get_height()
         ax.text(bar.get_x() + bar.get_width() / 2, height, f'{int(height)}', ha='center', va='bottom')
 
+# Plot label bars last
+label_bars = ax.bar(x + len(pred_counts) * bar_width, num_labels, bar_width, label='Labels')
+
 # Add text values to label bars
 for bar in label_bars:
     height = bar.get_height()
     ax.text(bar.get_x() + bar.get_width() / 2, height, f'{int(height)}', ha='center', va='bottom')
 
 # Customize the plot
-ax.set(xlabel='Books', ylabel='Count', title='Count of Predictions per Class')
-ax.set_xticks(x + 0.125, torah_books, rotation=0, ha='right')
+ax.set(xlabel='Books', ylabel='Count of samples', title='Count of Predictions per Class')
+ax.set_xticks(x + 0.25, torah_books, rotation=0, ha='center')
 ax.legend()
 ax.grid(axis='y', linestyle='--', alpha=0.7)
 plt.tight_layout()
