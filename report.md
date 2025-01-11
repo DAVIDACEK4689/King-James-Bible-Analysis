@@ -10,7 +10,7 @@ The King James Bible (KJB), also known as the Authorized Version (AV), is an Eng
 * Analyzing the similarity between books
 
 <p style="text-align: justify;">
-Once the initial analysis is complete, we will apply machine learning and deep learning techniques to assign each verse to its corresponding book within the Torah. The goal is to predict the book for each verse based on its content and structure.
+Once the initial analysis is complete, we will apply classic machine learning and deep learning techniques to assign each verse to its corresponding book within the Torah. The goal is to predict the book for each verse based on its content and structure.
 </p>
 
 
@@ -232,12 +232,12 @@ plt.show()
 
 We can see that Leviticus stands out as the least similar to the other books, which suggests that predictions for its verses are likely to be more accurate, as its content is unique. On the other hand, Exodus and Deuteronomy are very similar to two other books, making it harder to predict the correct book for verses from these books. This overlap in content could result in lower prediction accuracy.</p>
 
-## Machine Learning and Deep Learning Models
+## Classic Machine Learning and Deep Learning Models
 <p style="text-align: justify;">
-In this section, we apply machine learning and deep learning models to predict the book based on verse. We aim to evaluate various models and select the best one.
+In this section, we apply classic machine learning and deep learning models to predict the book based on verse. We aim to evaluate various models and select the best one.
 </p>
 
-### Machine Learning
+### Classic Machine Learning
 <p style="text-align: justify;">
 We will start with traditional machine learning models, such as Support Vector Machines, Multinomial Naive Bayes, Gradient Boosting Classifier and Multiclass Logistic Regression. The text data will be transformed using TF-IDF vectorizer.
 </p>
@@ -910,7 +910,7 @@ The 2-epoch model predicts that a verse belongs to the book of Numbers only 292 
 
 ## Conclusion
 <p style="text-align: justify;">
-We analyzed the King James Bible dataset and experimented with several machine learning models to predict the Torah book based on a verse. The best performing tuned model was logistic regression, achieving an accuracy of 66%. We then explored a deep learning approach using a variant of the BERT language model, which performed quite well, reaching an accuracy of 75% after 2 epochs and 77% after 4 epochs. It is important to note that we did not conduct extensive hyperparameter tuning, as this was not the primary goal of the project. There is surely room for improvement in each model with more thorough hyperparameter optimization.
+We analyzed the King James Bible dataset and experimented with several traditional machine learning models to predict the Torah book based on a verse. The best performing tuned model was logistic regression, achieving an accuracy of 66%. We then explored a deep learning approach using a variant of the BERT language model, which performed quite well, reaching an accuracy of 75% after 2 epochs and 77% after 4 epochs. It is important to note that we did not conduct extensive hyperparameter tuning, as this was not the primary goal of the project. There is surely room for improvement in each model with more thorough hyperparameter optimization.
 </p>
 
 <p style="text-align: justify;">
@@ -923,5 +923,3 @@ An interesting next step in this project would be to explore ensemble methods, c
 <p style="text-align: justify;">
 <a href="https://aclanthology.org/2021.semeval-1.87/">cs60075_team2 at SemEval-2021 Task 1 : Lexical Complexity Prediction using Transformer-based Language Models pre-trained on various text corpora</a> (Nandy et al., SemEval 2021)
 </p>
-
-
