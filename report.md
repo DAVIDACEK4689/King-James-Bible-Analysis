@@ -17,7 +17,7 @@ Once the initial analysis is complete, we will apply classic machine learning an
 ## Data
 
 <p style="text-align: justify;">
-The dataset used in this analysis is the full text of the King James Bible, excluding the deuterocanonical books. The text is stored in  `data/bible.txt`, and each row in the file represents a single verse from the Bible. The structure of each row is as follows:
+The dataset used in this analysis is the full text of the King James Bible, excluding the deuterocanonical books. The text is stored in <code>data/bible.txt</code>, and each row in the file represents a single verse from the Bible. The structure of each row is as follows:
 </p>
 
 * book name
